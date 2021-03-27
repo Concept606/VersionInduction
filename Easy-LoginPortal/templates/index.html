@@ -1,0 +1,30 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='starter-template.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="text-center" style="margin-top: 50px;">
+
+      
+    <p><h1>Welcome to our website! Happy to work for Version'21!</h1></p>
+  
+
+</div>
+<div class="head" style="margin-top: 100px; margin-left: 40%;">
+    
+    <a class="btn btn-lg btn-primary" href="{{ url_for('index') }}">Home</a>
+    <a class="btn btn-lg btn-success" href="{{ url_for('login') }}">Login</a>
+    <a class="btn btn-lg btn-primary" href="{{ url_for('signup') }}">Sign Up</a>
+       
+</div>
+
+  
+
+{% endblock %}
